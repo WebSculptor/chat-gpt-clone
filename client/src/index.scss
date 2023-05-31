@@ -1,0 +1,314 @@
+:root {
+  // colors
+  // --cl-2
+  --black-main: #202124;
+  // --hover
+  --black-tint-1: #2b2c30;
+  // --cl-1
+  --black-tint-2: #343541;
+  // --cl-3
+  --black-tint-3: #444655;
+  // --gray
+  --black-tint-4: #3e3f4b;
+
+  // --white
+  --white-main: #ececf1;
+  // --white-alt
+  --white-tint-1: #9a9b9f;
+  // --input
+  --white-tint-2: #40414f;
+
+  --success-main: #0ca37f;
+  --border: 1px solid #4d4d4f;
+
+  --pointer: pointer;
+  --not-allowed: not-allowed;
+
+  --mx: calc(100% - 26rem);
+  --mx-2: 76.8rem;
+
+  @media screen and (max-width: 1024px) {
+    --pointer: default;
+    --not-allowed: default;
+  }
+
+  @media screen and (max-width: 768px) {
+    --mx: 100%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background-color: var(--success-main);
+  color: var(--white-main);
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background-color: var(--black-tint-2);
+
+  @media screen and (min-width: 2560px) {
+    font-size: 122.5%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 60%;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 55%;
+    user-select: none;
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 55%;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 50%;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 45%;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+
+    .sticky {
+      position: sticky;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .col {
+      flex-direction: column;
+    }
+
+    .row {
+      flex-direction: row;
+    }
+
+    .justify {
+      text-align: justify;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .items-end {
+      align-items: flex-end;
+    }
+
+    .items-start {
+      align-items: flex-start;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .justify-around {
+      justify-content: space-around;
+    }
+
+    .justify-evenly {
+      justify-content: space-evenly;
+    }
+
+    .justify-end {
+      justify-content: flex-end;
+    }
+
+    .justify-start {
+      justify-content: flex-start;
+    }
+
+    button {
+      background-color: transparent;
+      user-select: none;
+    }
+
+    svg {
+      color: var(--white-main);
+    }
+
+    p {
+      color: var(--white-main);
+      font-size: 1.4rem;
+
+      @media screen and (max-width: 768px) {
+        font-size: 13px;
+        font-weight: normal;
+      }
+    }
+
+    .go1858758034 {
+      border-right-color: transparent;
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+// :root {
+// // --cl-2
+// --black-main: #202124;
+// // --cl-1
+// --black-tint-1: #343541;
+// // --cl-3
+// --black-tint-2: #444655;
+
+// // --white
+// --white-main: #ececf1;
+// // --white-alt
+// --white-tint-1: #9a9b9f;
+// // --input
+// --white-tint-2: #40414f;
+
+// --cl-1: #343541;
+// --cl-2: #202124;
+// --cl-3: #444655;
+// --white: #ececf1;
+// --white-alt: #9a9b9f;
+// --gray: #3e3f4b;
+// --hover: #2b2c30;
+// --input: #40414f;
+// --success-main: #0ca37f;
+// --border: 1px solid #4d4d4f;
+
+//   --pointer: pointer;
+//   --not-allowed: not-allowed;
+
+// --mx: calc(100% - 26rem);
+// --mx-2: 76.8rem;
+
+// @media screen and (max-width: 1024px) {
+//   --pointer: default;
+//   --not-allowed: default;
+// }
+
+// @media screen and (max-width: 768px) {
+//   --mx: 100%;
+// }
+// }
+
+// *,
+// *::before,
+// *::after {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+//   "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+//   "Helvetica Neue", sans-serif;
+//   border: none;
+//   outline: none;
+//   list-style: none;
+//   text-decoration: none;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// *::selection {
+//   background-color: var(--success-main);
+//   color: var(--white);
+// }
+
+// *::-webkit-scrollbar {
+//   display: none;
+// }
+
+// html {
+//   font-size: 62.5%;
+//   scroll-behavior: smooth;
+//   background-color: var(--cl-1);
+
+//   @media screen and (max-width: 768px) {
+//     font-size: 55%;
+//     cursor: default;
+//   }
+
+//   @media screen and (max-width: 425px) {
+//     font-size: 55%;
+//   }
+
+//   @media screen and (max-width: 375px) {
+//     font-size: 50%;
+//   }
+
+//   @media screen and (max-width: 320px) {
+//     font-size: 45%;
+//   }
+
+//   body,
+//   #root {
+//     height: 100%;
+//     width: 100%;
+//   }
+
+// button {
+//   background-color: transparent;
+// }
+
+// svg {
+//   color: var(--white);
+// }
+
+// p {
+//   color: var(--white);
+//   font-size: 1.5rem;
+//   font-weight: 600;
+// }
+// }

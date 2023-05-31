@@ -1,0 +1,130 @@
+main {
+  width: var(--mx);
+  margin-left: auto;
+  padding-bottom: 12rem;
+  position: relative;
+
+  .main_content {
+    width: 100%;
+    padding: 0 1.5rem;
+
+    .chat {
+      max-width: var(--mx-2);
+      margin: 0 auto;
+      width: 100%;
+      gap: 1.5rem;
+      padding: 2.4rem 0;
+      word-break: break-all;
+
+      .user_profile {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 6px;
+        object-fit: cover;
+      }
+
+      p {
+        margin-top: 0.6rem;
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+        white-space: pre-wrap;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .loading {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          line-height: 5px;
+          animation: dots 1s steps(1, end) infinite;
+        }
+
+        @keyframes dots {
+          0%,
+          20% {
+            background-color: var(--black-tint-3);
+            box-shadow: 1rem 0 0 var(--black-tint-3),
+              2rem 0 0 var(--black-tint-3);
+          }
+          40% {
+            background-color: var(--white-main);
+            box-shadow: 1rem 0 0 var(--black-tint-3),
+              2rem 0 0 var(--black-tint-3);
+          }
+          60% {
+            box-shadow: 1rem 0 0 var(--white-main), 2rem 0 0 var(--black-tint-3);
+          }
+          80%,
+          100% {
+            box-shadow: 1rem 0 0 var(--white-main), 2rem 0 0 var(--white-main);
+          }
+        }
+      }
+    }
+  }
+
+  .assistant {
+    background-color: var(--black-tint-3);
+    border-top: var(--border);
+    border-top-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .required_key {
+    padding: 3rem 2rem;
+    text-align: center;
+
+    p {
+      color: var(--white-tint-1);
+      user-select: none;
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .create_chat {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    padding: 3rem 2rem;
+
+    div {
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        user-select: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 5.5rem;
+    padding-bottom: 9rem;
+  }
+
+  @media screen and (max-width: 360px) {
+    .chat {
+      .user_profile {
+        display: none;
+      }
+    }
+  }
+}
