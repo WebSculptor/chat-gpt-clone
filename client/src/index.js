@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { router } from "routes/routing";
+import { router } from "routes";
 import { RouterProvider } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import "./index.scss";
@@ -15,7 +15,8 @@ root.render(
       toastOptions={{
         duration: 3000,
         style: {
-          fontSize: "1.6rem",
+          fontSize: "1.4rem",
+          fontWeight: "600",
         },
       }}
     />

@@ -3,7 +3,7 @@ footer {
   right: 0;
   width: var(--mx);
   margin-left: auto;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   background: linear-gradient(to bottom, #343541, var(--black-tint-2));
 
   .footer_container {
@@ -11,18 +11,20 @@ footer {
     margin: 0 auto;
 
     .form_control {
-      position: relative;
+      display: flex;
+      align-items: center;
       width: 100%;
-      height: 45px;
-      border-radius: 6px;
+      height: 5.5rem;
+      padding: 0 1.5rem;
+      border-radius: 1rem;
       background-color: var(--white-tint-2);
+      box-shadow: 1px 1px 18px -2px rgba(0, 0, 0, 0.2);
 
       input {
         width: 100%;
         height: 100%;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         background-color: transparent;
-        padding: 0 1.5rem;
         color: var(--white-main);
 
         &::placeholder {
@@ -37,24 +39,34 @@ footer {
       }
 
       button {
-        position: absolute;
-        right: 1.5rem;
-        top: 50%;
-        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.7rem;
+        width: 3.2rem;
+        height: 3.2rem;
         cursor: var(--pointer);
+        background-color: var(--success-main);
+        transition: opacity 0.1s ease, background-color 0.1s ease;
+
+        svg {
+          height: 1.6rem;
+        }
 
         &:disabled {
           opacity: 0.5;
-          user-select: none;
+          pointer-events: none;
+          background-color: transparent;
         }
       }
     }
 
     p {
-      font-size: 12px;
+      font-size: 11.5px;
       text-align: center;
       margin-top: 1rem;
-      color: var(--white-tint-1);
+      color: var(--white-main);
+      opacity: 0.7;
 
       a {
         color: inherit;

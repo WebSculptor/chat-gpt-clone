@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.scss";
 
-export const Header = ({ show, setShow }) => {
+export const Header = ({ show, setShow, title }) => {
   return (
     <header className="fixed">
       <nav className="flex items-center justify-between">
@@ -21,7 +21,7 @@ export const Header = ({ show, setShow }) => {
           </svg>
         </div>
 
-        <p>...</p>
+        <p>{title}</p>
 
         <div className="new__chat">
           <svg
