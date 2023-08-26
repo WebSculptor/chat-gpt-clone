@@ -27,7 +27,7 @@ export const Footer = ({
       ]);
 
       try {
-        const response = await fetch("http://localhost:7000/api/chat", {
+        const response = await fetch("http://localhost:7000", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -37,22 +37,22 @@ export const Footer = ({
           }),
         });
 
-        if (!title) {
-          const createTitle = await fetch("http://localhost:7000/api/title", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              title: prompt,
-            }),
-          });
+        // if (!title) {
+        //   const createTitle = await fetch("http://localhost:7000/title", {
+        //     method: "POST",
+        //     headers: {
+        //       "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({
+        //       title: prompt,
+        //     }),
+        //   });
 
-          const title = await createTitle.json();
-          setTitle(title?.title);
-          setChatHistory([...chatHistory, title]);
-          setIsLoading(false);
-        }
+        //   const title = await createTitle.json();
+        //   setTitle(title?.title);
+        //   setChatHistory([...chatHistory, title]);
+        //   setIsLoading(false);
+        // }
 
         const readData = response.body
           .pipeThrough(new TextDecoderStream())
