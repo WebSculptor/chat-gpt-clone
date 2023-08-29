@@ -19,8 +19,6 @@ app.post("/", async (req, res) => {
   const { message, apiKey } = req.body;
 
   try {
-    console.log("Message: " + message);
-    console.log("API Key: " + apiKey);
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
