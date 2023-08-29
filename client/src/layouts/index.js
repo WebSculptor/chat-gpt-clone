@@ -77,8 +77,7 @@ export const AppLayout = () => {
 
     try {
       const response = await fetch(
-        // "https://chat-gpt-server-yn56.onrender.com",
-        "http://localhost:8001",
+        "https://chat-gpt-server-yn56.onrender.com",
         {
           method: "POST",
           headers: {
