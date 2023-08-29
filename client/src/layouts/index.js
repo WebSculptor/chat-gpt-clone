@@ -7,7 +7,6 @@ import { getApiKey, getPrevChats } from "utils";
 import { toast } from "react-hot-toast";
 
 export const AppLayout = () => {
-  const baseUrl = "https://chat-gpt-server-yn56.onrender.com";
   const savedKey = getApiKey();
   const prevChat = getPrevChats();
   const [prompts, setPrompts] = useState("");
@@ -77,16 +76,20 @@ export const AppLayout = () => {
     ]);
 
     try {
-      const response = await fetch(baseUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: prompts,
-          apiKey: providedKey || savedKey,
-        }),
-      });
+      const response = await fetch(
+        // "https://chat-gpt-server-yn56.onrender.com",
+        "http://localhost:8001",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: prompts,
+            apiKey: providedKey || savedKey,
+          }),
+        }
+      );
 
       const data = await response.json();
       const result = data?.choices[0]?.message;

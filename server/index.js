@@ -1,12 +1,17 @@
+import axios from "axios";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
+import fetch from "node-fetch";
 
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 8001;
 const msg = `Welcome ${port}`;
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
 
