@@ -6,7 +6,7 @@ import {
   ThinkingComponent,
   EditorWindowComponent,
 } from "components";
-import { CopyIcon, CopiedIcon, UserIcon, AssistantIcon } from "constants/icons";
+import { UserIcon, AssistantIcon } from "constants/icons";
 
 export const ChatComponent = ({ setPrompts, chatLog }) => {
   return (

@@ -7,6 +7,7 @@ import { getApiKey, getPrevChats } from "utils";
 import { toast } from "react-hot-toast";
 
 export const AppLayout = () => {
+  const baseUrl = "https://chat-gpt-server-yn56.onrender.com";
   const savedKey = getApiKey();
   const prevChat = getPrevChats();
   const [prompts, setPrompts] = useState("");
@@ -76,7 +77,7 @@ export const AppLayout = () => {
     ]);
 
     try {
-      const response = await fetch("http://localhost:8000", {
+      const response = await fetch(baseUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
