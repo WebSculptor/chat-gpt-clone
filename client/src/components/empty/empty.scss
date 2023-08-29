@@ -1,0 +1,47 @@
+.empty_chat-container {
+  margin-top: auto;
+  height: calc(100vh - 16.2rem);
+
+  .empty_content {
+    height: 100%;
+    max-width: var(--mx-2);
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 7rem;
+
+    h1 {
+      font-size: 3.6rem;
+      color: var(--black-tint-3);
+    }
+
+    .card_grid {
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      grid-gap: 1rem;
+      padding: 1rem;
+
+      .card {
+        width: 100%;
+        padding: 1.3rem;
+        border: var(--border);
+        border-color: var(--black-tint-3);
+        border-radius: 1.2rem;
+        cursor: var(--pointer);
+
+        p {
+          font-size: 1.4rem;
+          color: var(--white-main);
+        }
+
+        span {
+          font-size: 1.3rem;
+          color: var(--white-tint-1);
+        }
+
+        &:hover {
+          background-color: var(--white-tint-2);
+        }
+      }
+    }
+  }
+}

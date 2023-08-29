@@ -1,19 +1,17 @@
-import { Aside } from "./aside";
-import { Chats } from "./chats";
-import { Footer } from "./footer";
-import { Header } from "./header";
-import { NoChat } from "./noChat";
-import { Loader } from "./loader";
-import { EditorWindow } from "./editor";
-import { Authentication } from "./auth";
+import { AsideComponent } from "./aside";
+import { ChatComponent } from "./chat";
+import { ModalComponent } from "./modal";
+import { EmptyChatComponent } from "./empty";
+import { ThinkingComponent } from "./loader";
+import { EditorWindowComponent } from "./editor";
+import { NotifyComponent } from "./notify";
 
 export {
-  Aside,
-  Chats,
-  Footer,
-  Header,
-  Authentication,
-  NoChat,
-  Loader,
-  EditorWindow,
+  AsideComponent,
+  ChatComponent,
+  ModalComponent,
+  EmptyChatComponent,
+  ThinkingComponent,
+  EditorWindowComponent,
+  NotifyComponent,
 };

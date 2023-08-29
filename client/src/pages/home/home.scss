@@ -1,0 +1,155 @@
+.home_container {
+  flex: 1;
+  height: 100vh;
+
+  .conversation_header {
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: var(--mx);
+    height: 6.1rem;
+    background-color: var(--black-tint-2);
+    border-bottom: 1px solid var(--black-tint-1);
+    padding: 0 2rem;
+    color: var(--white-main);
+
+    .hamburger {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-right: -1rem;
+      border: var(--border);
+      cursor: var(--pointer);
+      border-radius: 0.3rem;
+      opacity: 0;
+      pointer-events: none;
+
+      svg {
+        font-size: 2.3rem;
+        color: var(--white-main);
+      }
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+
+    svg {
+      font-size: 1.8rem;
+      cursor: var(--pointer);
+    }
+  }
+
+  .form_container {
+    margin-top: auto;
+    width: 100%;
+    max-width: var(--mx);
+    padding: 1rem 2rem;
+    gap: 0.3rem;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--black-tint-2),
+      var(--black-tint-2)
+    );
+
+    .input_container {
+      width: 100%;
+      max-width: var(--mx-2);
+      margin: 0 auto;
+
+      .input_holder {
+        width: 100%;
+
+        textarea {
+          resize: vertical;
+          border-radius: 0.8rem;
+          padding: 1.7rem 2rem;
+          padding-right: 4rem;
+          width: 100%;
+          height: 5.8rem;
+          min-height: 5.8rem;
+          max-height: 23.4rem;
+          background-color: var(--black-tint-3);
+          font-size: 1.5rem;
+          color: var(--white-main);
+          border: 1px solid var(--black-tint-1);
+
+          &::placeholder {
+            color: var(--white-tint-1);
+          }
+
+          &:disabled {
+            pointer-events: none;
+            opacity: 0.5;
+          }
+        }
+
+        button {
+          bottom: 1.7rem;
+          right: 2rem;
+          background-color: var(--success-main);
+          width: 3rem;
+          height: 3rem;
+          border-radius: 0.5rem;
+          transition: background-color 0.1s ease-in-out;
+
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--white-main);
+            transition: color 0.1s ease-in-out, opacity 0.1s ease-in-out;
+          }
+
+          &:disabled {
+            background-color: transparent;
+            pointer-events: none;
+
+            svg {
+              color: var(--white-tint-1);
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: var(--white-main);
+      opacity: 0.9;
+
+      a {
+        text-decoration: underline;
+        color: inherit;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .conversation_header,
+    .form_container {
+      max-width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .conversation_header {
+      .hamburger {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    .form_container {
+      .input_container {
+        max-width: 100%;
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
+}

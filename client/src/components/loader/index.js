@@ -1,7 +1,7 @@
 import React from "react";
 import "./loader.scss";
 
-export const Loader = () => {
+export const ThinkingComponent = () => {
   return (
     <div className="isLoading">
       <span></span>

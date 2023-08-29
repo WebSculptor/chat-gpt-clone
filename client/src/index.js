@@ -1,13 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { router } from "routes";
+import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-import "./index.scss";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <>
+import "./index.scss";
+import { router } from "router";
+
+createRoot(document.getElementById("root")).render(
+  <React.Fragment>
     <Toaster
       position="top-right"
       reverseOrder={false}
@@ -16,10 +16,10 @@ root.render(
         duration: 3000,
         style: {
           fontSize: "1.4rem",
-          fontWeight: "600",
         },
       }}
     />
+
     <RouterProvider router={router} />
-  </>
+  </React.Fragment>
 );
